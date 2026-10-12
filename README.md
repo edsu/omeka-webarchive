@@ -139,6 +139,6 @@ docker compose -f docker/docker-compose.yml down -v
 
 ## License
 
-The plugin is GPLv3 (`WebArchive/LICENSE`). The bundled `ui.js` and `sw.js` are part of
-ReplayWeb.page, copyright Webrecorder Software, and AGPLv3
+This repository and the plugin are GPLv3 (`LICENSE`). The bundled `ui.js` and `sw.js` are part
+of ReplayWeb.page, copyright Webrecorder Software, and AGPLv3
 (`WebArchive/views/shared/javascripts/replaywebpage/LICENSE`).
