@@ -1,0 +1,25 @@
+# Try the Web Archive plugin: see "Try it" in README.md.
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: omeka
+      MARIADB_USER: omeka
+      MARIADB_PASSWORD: omeka
+      MARIADB_RANDOM_ROOT_PASSWORD: "yes"
+    volumes:
+      - db:/var/lib/mysql
+
+  omeka:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:8081:80"
+    volumes:
+      - ../WebArchive:/var/www/html/plugins/WebArchive:ro
+      - files:/var/www/html/files
+
+volumes:
+  db:
+  files:
